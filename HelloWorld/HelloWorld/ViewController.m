@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
-
+#import "DotButton.h"
 @interface ViewController ()
 
 @end
@@ -19,20 +19,89 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+  
+//    UIView *blueView=[[UIView alloc] init];
+//    blueView.backgroundColor=[UIColor blueColor];
+//    [self.view addSubview:blueView];
+//    
+//    
+//    UIView *greenView=[[UIView alloc] init];
+//    greenView.backgroundColor=[UIColor greenColor];
+//    [self.view addSubview:greenView];
+//    
+//    UIView *yellowView=[[UIView alloc] init];
+//    yellowView.backgroundColor=[UIColor yellowColor];
+//    [self.view addSubview:yellowView];
+//    UIView *superView=self.view;
+//    
+//    [blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        make.left.equalTo(superView.mas_left).offset(30);
+//        make.top.equalTo(superView.mas_top).offset(40);
+//        
+//        
+//        make.right.equalTo(yellowView.mas_left).offset(-50);
+//        make.bottom.equalTo(yellowView.mas_top).offset(-30);
+//        
+//        make.width.equalTo(greenView.mas_width);
+//        make.height.equalTo(greenView.mas_height);
+//    }];
+//    
+//    [greenView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        make.top.equalTo(blueView.mas_top);
+//        make.left.equalTo(blueView.mas_right).offset(50);
+//        make.bottom.equalTo(blueView.mas_bottom);
+//        
+//        make.right.equalTo(superView.mas_right).offset(-30);
+//        
+//        make.height.equalTo(blueView.mas_height);
+//        make.width.equalTo(blueView.mas_width);
+//        
+//    }];
+//
+//    [yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
+////        
+//        make.left.equalTo(blueView.mas_left);
+//        make.right.equalTo(greenView.mas_right);
+//        make.top.equalTo(blueView.mas_bottom).offset(30);
+//        make.bottom.equalTo(superView.mas_bottom).offset(-30);
+//        make.height.equalTo(greenView.mas_height);
+////
+//        
+//        
+//    }];
     
-    UIView *sv = [UIView new];
-    sv.backgroundColor=[UIColor brownColor];
     
-    //在做autoLayout之前 一定要先将view添加到superview上 否则会报错
-    [self.view addSubview:sv];
-    //mas_makeConstraints就是Masonry的autolayout添加函数 将所需的约束添加到block中行了
-    [sv mas_makeConstraints:^(MASConstraintMaker *make) {
-        //将sv居中(很容易理解吧?)
-        make.center.equalTo(self.view);
-        
-        //将size设置成(300,300)
-        make.size.mas_equalTo(CGSizeMake(300, 300));
-    }];
+//    
+    DotButton *button=[[DotButton alloc]initWithFrame:CGRectMake(100, 100, 30, 30) withType:HAND_TYPE];
+    [button addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    DotButton *button1=[[DotButton alloc]initWithFrame:CGRectMake(100, 200, 30, 30) withType:FACE_TYPE];
+    [button1 addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+    
+    DotButton *button2=[[DotButton alloc]initWithFrame:CGRectMake(100, 300, 30, 30) withType:SART_TYPE];
+    [button2 addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
+    
+    DotButton *button3=[[DotButton alloc]initWithFrame:CGRectMake(100, 400, 30, 30) withType:HEART_TYPE];
+    [button3 addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
+    
+    
+    
+    
+}
+-(void)clickAction:(UIButton *)sender
+{
+    if (sender.selected) {
+        sender.selected=NO;
+    }else{
+        sender.selected=YES;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199062BE1B57CAF900DBF196 /* DotButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 199062BD1B57CAF900DBF196 /* DotButton.m */; };
+		199062C31B57D07B00DBF196 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 199062BF1B57D07B00DBF196 /* heart.png */; };
+		199062C41B57D07B00DBF196 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 199062C01B57D07B00DBF196 /* like.png */; };
+		199062C51B57D07B00DBF196 /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 199062C11B57D07B00DBF196 /* smile.png */; };
+		199062C61B57D07B00DBF196 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 199062C21B57D07B00DBF196 /* star.png */; };
 		19D288FA1B4F541D00C32338 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D288F91B4F541D00C32338 /* main.m */; };
 		19D288FD1B4F541D00C32338 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D288FC1B4F541D00C32338 /* AppDelegate.m */; };
 		19D289001B4F541D00C32338 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D288FF1B4F541D00C32338 /* ViewController.m */; };
@@ -28,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199062BC1B57CAF900DBF196 /* DotButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotButton.h; sourceTree = "<group>"; };
+		199062BD1B57CAF900DBF196 /* DotButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotButton.m; sourceTree = "<group>"; };
+		199062BF1B57D07B00DBF196 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		199062C01B57D07B00DBF196 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		199062C11B57D07B00DBF196 /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		199062C21B57D07B00DBF196 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		19D288F41B4F541D00C32338 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D288F81B4F541D00C32338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D288F91B4F541D00C32338 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +76,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199062C71B57D0A400DBF196 /* DotButton */ = {
+			isa = PBXGroup;
+			children = (
+				199062BC1B57CAF900DBF196 /* DotButton.h */,
+				199062BD1B57CAF900DBF196 /* DotButton.m */,
+				199062BF1B57D07B00DBF196 /* heart.png */,
+				199062C01B57D07B00DBF196 /* like.png */,
+				199062C11B57D07B00DBF196 /* smile.png */,
+				199062C21B57D07B00DBF196 /* star.png */,
+			);
+			name = DotButton;
+			sourceTree = "<group>";
+		};
 		19D288EB1B4F541D00C32338 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +112,7 @@
 		19D288F61B4F541D00C32338 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				199062C71B57D0A400DBF196 /* DotButton */,
 				19D288FB1B4F541D00C32338 /* AppDelegate.h */,
 				19D288FC1B4F541D00C32338 /* AppDelegate.m */,
 				19D288FE1B4F541D00C32338 /* ViewController.h */,
@@ -225,8 +250,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199062C31B57D07B00DBF196 /* heart.png in Resources */,
+				199062C41B57D07B00DBF196 /* like.png in Resources */,
 				19D289031B4F541D00C32338 /* Main.storyboard in Resources */,
 				19D289081B4F541D00C32338 /* LaunchScreen.xib in Resources */,
+				199062C61B57D07B00DBF196 /* star.png in Resources */,
+				199062C51B57D07B00DBF196 /* smile.png in Resources */,
 				19D289051B4F541D00C32338 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D289001B4F541D00C32338 /* ViewController.m in Sources */,
+				199062BE1B57CAF900DBF196 /* DotButton.m in Sources */,
 				19D288FD1B4F541D00C32338 /* AppDelegate.m in Sources */,
 				19D288FA1B4F541D00C32338 /* main.m in Sources */,
 			);
