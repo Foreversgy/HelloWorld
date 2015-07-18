@@ -7,4 +7,4 @@ CoreAnimation
 
 自己写的OC版
 
-![image](https://github.com/Foreversgy/HelloWorld/Animation.gif)
+![image](https://github.com/Foreversgy/HelloWorld/raw/master/Animation.gif)
