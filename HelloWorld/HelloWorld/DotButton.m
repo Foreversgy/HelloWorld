@@ -127,34 +127,35 @@
     
     circleTransform_=[CAKeyframeAnimation animationWithKeyPath:@"transform"];
     circleTransform_.duration=0.3;
-    circleTransform_.values = @[[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0,  0.0,  1.0)],    //  0/10
-                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5,  0.5,  1.0)],    //  0/10
-                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0,  1.0,  1.0)],    //  0/10
-                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3,  1.3,  1.0)],    //  0/10
-                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.5,  1.5,  1.0)]];    //  0/10
+    circleTransform_.values = @[[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0,  0.0,  1.0)],   
+                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5,  0.5,  1.0)],
+                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0,  1.0,  1.0)],
+                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3,  1.3,  1.0)],
+                                [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.5,  1.5,  1.0)]];
     
     maskTransform_=[CAKeyframeAnimation animationWithKeyPath:@"transform"];
-    maskTransform_.duration=0.4;
+    maskTransform_.duration=0.3;
     maskTransform_.values=@[[NSValue valueWithCATransform3D:CATransform3DIdentity],
                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0*self.frame.size.width,  1.0*self.frame.size.height,  1.0)],    //  0/10
-                            [NSValue valueWithCATransform3D:CATransform3DMakeScale(4.3*self.frame.size.width,  4.3*self.frame.size.height,  1.0)],    //  0/10
+                            [NSValue valueWithCATransform3D:CATransform3DMakeScale(4.0*self.frame.size.width,  4.0*self.frame.size.height,  1.0)],    //  0/10
                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(5*self.frame.size.width,  5*self.frame.size.height,  1.0)]
                             ];    //  0/10
     
     imageTransform_=[CAKeyframeAnimation animationWithKeyPath:@"transform"];
     imageTransform_.duration=0.8;
     imageTransform_.values=@[
-                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0,     0,    1.0)],    //  0/10
-                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.3,   0.3,  1.0)],    //  0/10
-                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3,   1.3,  1.0)],    //  0/10
-                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0,   1.0,  1.0)],    //  0/10
-                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.1,   1.1,  1.0)],    //  0/10
-                             [NSValue valueWithCATransform3D:CATransform3DIdentity]];   //  0/1
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0,     0,    1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1,   0.1,  1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.3,   0.3,  1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2,   1.2,  1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.8,   0.8,  1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.1,   1.1,  1.0)],
+                             [NSValue valueWithCATransform3D:CATransform3DIdentity]];
     
     lineStart=[CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
     lineStart.duration=1;
     lineStart.values=@[@(0),
-                       @(0.1),
+                       @(0),
                        @(0.2),
                        @(0.3),
                        @(0.4),
@@ -168,7 +169,7 @@
     lineEnd=[CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
     lineEnd.duration=1;
     lineEnd.values=@[@(0.0),
-                     @(0.2),
+                     @(0),
                      @(0.3),
                      @(0.4),
                      @(0.5),
@@ -199,7 +200,14 @@
 
     }else{
         
-        
+        [circleLayer_ removeAllAnimations];
+        [maskCircleLayer_ removeAllAnimations];
+        [imageLayer_ removeAllAnimations];
+        for (NSInteger index=0; index<5; index++) {
+            CAShapeLayer *layer=[lineLayerAry_ objectAtIndex:index];
+            [layer removeAllAnimations];
+            
+        }
         imageLayer_.fillColor=[UIColor colorWithRed:3/255 green:43/255 blue:3/255 alpha:1.0].CGColor;
         
     }
