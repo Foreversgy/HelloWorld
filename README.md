@@ -1,3 +1,5 @@
 # HelloWorld
 OC HelloWorld
-/Users/tiger/Desktop/Animation.gif
+CoreAnimation
+模仿https://github.com/okmr-d/DOFavoriteButton  --Swift版
+自己写的OC版
